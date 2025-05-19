@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/main.css">
+    <script type="module" src="./src/main.js" defer></script>
+
+    <title>devfinder</title>
+  </head>
+  <body>
+    <main id="app">
+      <div class="top-container">
+        <h1 id="app-name">devfinder</h1>
+        <div id="toggle-container">
+          <button id="light-toggle">LIGHT<img src="./assets/icon-sun.svg" alt="sun icon"></button>
+          <button id="dark-toggle">DARK<img src="./assets/icon-moon.svg" alt="moon icon"></button>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="search-inner-wrapper">
+          <img src="./assets/icon-search.svg">
+          <input id="user-input" type="text" placeholder="Search a Github username">
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+      <div class="user-info-container">
+        <div class="user-information">
+          <img id="userAvi" src="" alt="user avatar">
+          <div>
+            <span id="username"></span>
+            <span id="userId"></span>
+            <span id="dateJoined">Joined</span>
+          </div>
+        </div>
+        <div class="user-bio">
+          <p id="bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex voluptates deleniti adipisci odit architecto porro iste unde sed temporibus, veniam minus fugit consectetur saepe tenetur mollitia facere at perferendis optio.</p>
+        </div>
+        <div class="user-stats">
+          <div>
+            <span>Repos</span>
+            <span id="reposEl"></span>
+          </div>
+          <div>
+            <span>Followers</span>
+            <span id="followersEl"></span>
+          </div>
+          <div>
+            <span>Following</span>
+            <span id="followingEl"></span>
+          </div>
+        </div>
+        <div class="user-socials">
+          <div class="location">
+            <img src="./assets/icon-location.svg">
+            <span id="locationEl"></span>
+          </div>
+          <div class="link">
+            <img src="./assets/icon-website.svg">
+            <span id="linkEl"></span>
+          </div>
+          <div class="twitter">
+            <img src="./assets/icon-twitter.svg">
+            <span id="twitterEl"></span>
+          </div>
+          <div class="company">
+            <img src="./assets/icon-company.svg">
+            <span id="companyEl"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
