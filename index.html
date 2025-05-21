@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/main.css">
     <script type="module" src="./src/main.js" defer></script>
-
     <title>devfinder</title>
   </head>
   <body>
@@ -22,51 +24,51 @@
         <div class="search-inner-wrapper">
           <img src="./assets/icon-search.svg">
           <input id="user-input" type="text" placeholder="Search a Github username">
-          <button id="searchBtn">Search</button>
+          <button id="search-btn">Search</button>
         </div>
       </div>
       <div class="user-info-container">
         <div class="user-information">
-          <img id="userAvi" src="" alt="user avatar">
+          <img id="user-avi" src="" alt="user avatar">
           <div>
             <span id="username"></span>
-            <span id="userId"></span>
-            <span id="dateJoined">Joined</span>
+            <span id="user-id"></span>
+            <span id="date-joined">Joined</span>
           </div>
         </div>
         <div class="user-bio">
-          <p id="bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex voluptates deleniti adipisci odit architecto porro iste unde sed temporibus, veniam minus fugit consectetur saepe tenetur mollitia facere at perferendis optio.</p>
+          <p id="bio"></p>
         </div>
         <div class="user-stats">
           <div>
             <span>Repos</span>
-            <span id="reposEl"></span>
+            <span id="repos"></span>
           </div>
           <div>
             <span>Followers</span>
-            <span id="followersEl"></span>
+            <span id="followers"></span>
           </div>
           <div>
             <span>Following</span>
-            <span id="followingEl"></span>
+            <span id="following"></span>
           </div>
         </div>
         <div class="user-socials">
-          <div class="location">
+          <div>
             <img src="./assets/icon-location.svg">
-            <span id="locationEl"></span>
+            <span id="location"></span>
           </div>
-          <div class="link">
+          <div>
             <img src="./assets/icon-website.svg">
-            <span id="linkEl"></span>
+            <span id="website"></span>
           </div>
-          <div class="twitter">
+          <div>
             <img src="./assets/icon-twitter.svg">
-            <span id="twitterEl"></span>
+            <span id="twitter"></span>
           </div>
-          <div class="company">
+          <div>
             <img src="./assets/icon-company.svg">
-            <span id="companyEl"></span>
+            <span id="company"></span>
           </div>
         </div>
       </div>
