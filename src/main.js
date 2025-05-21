@@ -54,8 +54,11 @@ async function updateUser() {
             // Set user info 
             userAvatar.src = data.avatar_url
             usernameSpan.textContent = data.name
-            userIDSpan.textContent = data.login
-            dateJoinedSpan.textContent = `Joined ${data.created_at}`
+            userIDSpan.textContent = `@${data.login}`
+
+            const createdAt = new Date(data.created_at)
+            const formattedDate = createdAt.toLocaleDateString('en-US')
+            dateJoinedSpan.textContent = `Joined ${formattedDate}`
             if (data.bio) {
                 userBio.textContent = data.bio
             } else {

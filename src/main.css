@@ -56,9 +56,59 @@
   /* END OF RESET */
  /* ********************************************* */
 
+ :root {
+  --primary-blue: #0079ff;
+  --light-mode-lightgrey: #697C9A;
+  --light-mode-bluegrey: #4B6A9B;
+  --light-mode-darkgrey: #2B3442;
+  --light-mode-offwhite: #F6F8FF;
+  --light-mode-eggshell: #FEFEFE;
+
+  --dark-mode-white: #FFFFFF;
+  --dark-mode-offblack: #141D2F;
+  --dark-mode-navy: #1E2A47;
+
+ }
+/* Light mode CSS */
+ @media (prefers-color-scheme: light) {
+    body {
+      background-color: var(--light-mode-offwhite);
+    }
+ }
+
+/* Dark mode CSS */
+ @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--dark-mode-offblack);
+      color: var(--dark-mode-white);
+    }
+
+    #user-id {
+      color: var(--primary-blue);
+    }
+
+    .user-info-container {
+      background-color: var(--dark-mode-navy);
+    }
+    .user-stats {
+      background-color: var(--dark-mode-offblack);
+    }
+    .search-container {
+      background: var(--dark-mode-navy);
+    }
+ }
+
  #app {
     margin-inline: 1rem;
     font-family: 'Space Mono';
+ }
+
+ .block {
+  display: block;
+ }
+
+ .bold {
+  font-weight: bold;
  }
 
  button {
@@ -69,18 +119,106 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-block: 1.5rem;
+    margin-bottom: 1rem;
+ }
+
+ #app-name {
+  font-size: 1.6rem;
  }
 
 
  #toggle-container button {
-
     img {
         display: inline;
     }
  }
 
+ .search-container {
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+
+  #search-btn {
+    background-color: var(--primary-blue);
+    color: var(--dark-mode-white);
+    border: none;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  #user-input {
+    background-color: transparent;
+    border: none;
+    color: var(--dark-mode-white);
+  }
+
  .search-inner-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 8px;
+ }
+
+ .user-info-container {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+ }
+
+ .user-information {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    #user-avi {
+      border-radius: 50%;
+      max-width: 4.4rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+ }
+
+ .user-bio {
+  margin-bottom: 1rem;
+ }
+
+ .user-stats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+
+    div {
+      span:first-of-type  {
+        font-size: 0.8rem;
+      }
+    }
+ }
+
+ .user-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+    img {
+      display: inline;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 1rem;
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
  }
